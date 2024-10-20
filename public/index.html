@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information about the document, including character encoding and compatibility -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- The title that will appear on the browser tab -->
     <title>Chat Socket.io</title>
+
+    <!-- Link to an external CSS file for styling the page -->
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+    <!-- Main container for the app -->
     <div class="app">
+        <!-- Section for joining the chatroom, initially visible ('active' class) -->
         <div class="screen join-screen active">
             <div class="form">
                 <h2>Join chatroom</h2>
+
+                <!-- Input field for the username -->
                 <div class="form-input">
                     <label for="username">Username</label>
                     <input id="username" type="text" />
                 </div>
+
+                <!-- Button to join the chatroom -->
                 <div class="form-input">
                     <button id="join-user">Join</button>
                 </div>
             </div>
         </div>
+
+        <!-- Section for the chatroom, initially hidden -->
         <div class="screen chat-screen">
+            <!-- Header section with room selection and exit button -->
             <div class="header">
                 <div class="logo">Chatroom</div>
+
+                <!-- List of available chat rooms -->
                 <div class="rooms">
                     <div class="room active">Room 1</div>
                     <div class="room">Room 2</div>
                     <div class="room">Room 3</div>
                 </div>
+
+                <!-- Button to exit the chat -->
                 <button id="exit-chat">Exit</button>
             </div>
+
+            <!-- Container for displaying messages -->
             <div class="messages"></div>
+
+            <!-- Input area to type and send messages -->
             <div class="typebox">
                 <input type="text" id="message-input" />
                 <button id="send-message">Send</button>
@@ -39,8 +61,9 @@
         </div>
     </div>
 
+    <!-- Include the Socket.io library -->
     <script src="socket.io/socket.io.js"></script>
-    <script src="./main.js">
-    </script>
+    <!-- Link to the external JavaScript file for handling the app logic -->
+    <script src="./main.js"></script>
 </body>
 </html>
